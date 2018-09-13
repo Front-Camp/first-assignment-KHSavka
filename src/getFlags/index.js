@@ -7,6 +7,14 @@
  */
 const getFlags = arr => {
   /* your logic here...*/
+  var sum = []; 
+
+  arr.forEach(function(obj) {
+    
+    sum = arr.concat(obj.flags);
+
+  });
+return sum;
 };
 
 export default getFlags;

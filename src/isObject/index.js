@@ -9,6 +9,10 @@
  */
 const isObject = data => {
   /* your logic here...*/
+  if (typeof data !== 'string') {
+    return true;
+  }
+
 };
 
 export default isObject;

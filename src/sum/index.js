@@ -11,6 +11,17 @@
 */
 const sum = (a, b) => {
   /* your logic here...*/
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error('a, b is not number');
+  }
+  if (!isFinite(a) || !isFinite(b)) {
+    throw new Error('a, b is not finite');
+  } 
+  if (!isNaN(a) || !isNaN(b)) {
+    throw new Error('a, b is Nan');
+  }  
+  
+  return a + b;
 };
 
 export default sum;

@@ -15,4 +15,8 @@ describe('max::', () => {
   it('Should ignore NaN', () => {
     expect(max([NaN, 1, 2])).toBe(2);
   });
+  
+  it('Should ignore NaN', () => {
+    expect(max([8, NaN, NaN, 1, 2, NaN])).toBe(8);
+  });
 });

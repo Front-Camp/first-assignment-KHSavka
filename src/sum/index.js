@@ -17,8 +17,8 @@ const sum = (a, b) => {
   if (!isFinite(a) || !isFinite(b)) {
     throw new Error('a, b is not finite');
   } 
-  if (!isNaN(a) || !isNaN(b)) {
-    throw new Error('a, b is Nan');
+  if (isNaN(a) || isNaN(b)) {
+    throw new Error('a, b is NaN');
   }  
   
   return a + b;

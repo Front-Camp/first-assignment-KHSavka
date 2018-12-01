@@ -9,7 +9,15 @@
  * twoSums([5, 9, 3], 12); // [9, 3]
  */
 const twoSums = (arr, base) => {
-  /* your logic here...*/
+  for (var idxA = 0; idxA < arr.length - 1; idxA++) {
+    for (var idxB = idxA + 1; idxB < arr.length; idxB++) {
+      if (arr[idxA] + arr[idxB] === base) {
+        return [arr[idxA], arr[idxB]];      
+      }
+    }
+  }
+
+  return [];
 };
 
 export default twoSums;

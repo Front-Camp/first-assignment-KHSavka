@@ -6,15 +6,18 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
-  var sum = []; 
+  /*
+  var flags = [];
 
-  arr.forEach(function(obj) {
-    
-    sum = arr.concat(obj.flags);
-
+  arr.forEach(val => {
+    flags = flags.concat(val.flags);
   });
-return sum;
+
+  return flags;
+  */
+
+  return arr.reduce((acc, val) => acc.concat(val.flags), []);
+  //return arr.reduce((acc, val) => ({flags: acc.flags.concat(val.flags)})).flags;
 };
 
 export default getFlags;

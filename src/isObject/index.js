@@ -9,10 +9,20 @@
  */
 const isObject = data => {
   /* your logic here...*/
-  if (typeof data !== 'string') {
-    return true;
+  if (typeof data !== 'object') {
+    return false;
   }
 
+  // null, Array
+  if (data === null) {
+    return false;
+  }
+
+  if (Array.isArray(data)) {
+    return false;
+  }
+  
+  return true;
 };
 
 export default isObject;
